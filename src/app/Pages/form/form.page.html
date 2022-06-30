@@ -1,0 +1,24 @@
+<ion-content [fullscreen]="true">
+  <div class="logo">
+    <img src='/assets/icon/img/logo.png'>
+    </div>  
+ 
+<ion-card>
+      <ion-text color='warning'>Ingresa tu mail Duoc</ion-text>
+    <ion-item>
+      <ion-label position="floating"> Mail</ion-label>
+      <ion-input type="email"  placeholder="nombre@duocuc.cl"></ion-input>
+    </ion-item>
+    <ion-button color='dark' expand="full" (click)="mail()">Enviar</ion-button>
+    
+    
+  </ion-card>
+  </ion-content>
+
+  <ion-item>
+    <ion-buttons (click)="cerrar()" slot="start">
+
+      <ion-icon name="exit-outline" size="large"></ion-icon>
+    </ion-buttons>
+  </ion-item>
+  

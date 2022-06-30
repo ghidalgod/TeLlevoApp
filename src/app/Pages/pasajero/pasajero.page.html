@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    
+    <ion-segment (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="pasajero">
+        <ion-icon name="person-outline"></ion-icon>
+
+      </ion-segment-button>
+      <ion-segment-button value="mapa">
+        <ion-icon name="car-outline"></ion-icon>
+      </ion-segment-button>
+
+
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-router-outlet>
+  </ion-router-outlet>
+</ion-content>

@@ -1,0 +1,48 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <h3>¡Programa tu viaje!</h3>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Dirección</ion-label>
+      <ion-input type="text" placeholder="Dirección" [(ngModel)]="programar.direccion"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Comuna</ion-label>
+      <ion-input type="text" placeholder="Comuna" [(ngModel)]="programar.comuna"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Fecha Inicio</ion-label>
+      <ion-datetime type="date" placeholder="Inicia tu viaje" [(ngModel)]="programar.inicio"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Hora de Viaje</ion-label>
+      <ion-datetime display-format="H:MM" picker-format="H:MM" value="2021-12-06T00:00Z" [(ngModel)]="programar.hora">
+      </ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Tarifa </ion-label>
+      <ion-input placeholder="Tarifa menor a $2000" type="number" [(ngModel)]="programar.tarifa" min="0" max="2000">
+      </ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <ion-button shape="block" (click)="cancelar()" color="dark">Cancelar</ion-button>
+      </ion-col>
+      <ion-col col-6>
+        <ion-button shape="block" (click)="iniciar()" color="dark">Iniciar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+  <ion-item>
+    <ion-buttons (click)="cerrar()" slot="start">
+      <ion-icon name="exit-outline" size="large"></ion-icon>
+    </ion-buttons>
+  </ion-item>

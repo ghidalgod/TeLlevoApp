@@ -1,0 +1,45 @@
+<ion-card>
+  <ion-toolbar  >
+  
+    <ion-item>
+      
+      
+      <ion-label position="floating">¿A dónde vas?</ion-label>
+        <ion-input  [(ngModel)]="destino" type="text"  >
+        </ion-input>
+      </ion-item>
+
+  </ion-toolbar>
+  </ion-card>
+  
+     <ion-content>
+      <div #map id="map">
+        <map></map>
+      </div>
+      <div id="indicators"></div>
+    </ion-content>
+  
+    <ion-row>
+      <ion-col col-6>
+        <ion-button color="dark">Pagar</ion-button>
+      </ion-col>
+      <ion-col col-6>
+        <ion-button [hidden]= "isSolicitarViaje"  block primary color="dark" (click)="confirmarViaje()">Solicitar Viaje</ion-button>
+        <ion-button [hidden]= "!isSolicitarViaje" block secondary color="dark" (click)="cancelarViaje()">Cancelar Viaje</ion-button>
+      </ion-col>
+      <ion-row>
+        <ion-col>Tiempo estimado en llegar: 5 minutos...</ion-col>
+      </ion-row>
+    </ion-row>
+      
+    <ion-item>
+      <ion-buttons (click)="cerrar()" slot="start">
+        <ion-icon name="exit-outline" size="large"></ion-icon>
+      </ion-buttons>
+    </ion-item> 
+  
+  <ion-content>
+  <ion-router-outlet>
+    
+  </ion-router-outlet>
+  </ion-content>

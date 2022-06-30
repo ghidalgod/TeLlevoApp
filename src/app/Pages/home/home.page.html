@@ -1,0 +1,40 @@
+<ion-content [fullscreen]="true">
+<ion-header>
+  <div class="logo" #imagen>
+    <img src='/assets/icon/img/logo.png'>
+  </div>
+</ion-header> 
+  <ion-card>
+<ion-card-header>
+
+  <ion-form [formGroup]="form"  (ngSubmit)="submit()">
+       <ion-item lines="full">
+      <ion-label position="floating"> Usuario </ion-label>
+      <ion-input class ="input-form" type="text" placeholder="Ingresa tu usuario" formControlName="nombre" >
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"> Contraseña </ion-label>
+      <ion-input  class ="input-form"  type="password" placeholder="Contraseña" formControlName="contrasena" >
+      </ion-input>
+    </ion-item>
+  </ion-form>
+  <ion-button (click)="ingresar()" type="submit" color='dark' >Ingresar</ion-button>
+ 
+</ion-card-header>
+
+<ion-item>
+  <ion-buttons (click)="recuperar()" slot="start">
+    <ion-text>Recuperar Contraseña</ion-text>
+  </ion-buttons>
+</ion-item>
+</ion-card>
+
+  
+    
+
+ 
+ 
+
+
+</ion-content>
